@@ -1,5 +1,9 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
+let votingAge = 20;
+if(votingAge > 18){
+    console.log(true)
+}
 
 
 
@@ -10,24 +14,32 @@
 
 
 
-
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+let number = 1999;
+Number('1999');
+console.log(number)
 
 
 
 
 
 //Task d: Write a function to multiply a*b 
-
-
-
-
+let a = 2;
+let b = 3;
+function myFunc(a,b){
+    console.log(a * b)
+}
+myFunc(a,b)
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
+let c = 24;
+let d = 7;
+function dogyears(c,d){
+    console.log(c * d)
+}
+dogyears(c,d)
 
 
 
@@ -48,8 +60,7 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
-
+ 
 
 
 
@@ -59,8 +70,13 @@
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-
-  
+function rps(rock, paper, scissors){
+let random = math.random()
+if (random < 3) {console.log('rock')}
+if (random > 3 && random <6){console.log('paper')}
+if (random > 6){console.log('scissors')}
+}
+  rps(rock)
   
 
 /************************************************************** Task 5 **************************************************************/
