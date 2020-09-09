@@ -10,8 +10,11 @@ if(votingAge > 18){
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
-
+let x = "hello";
+console.log(x)
+if (x === "hello"){
+    x= "goodbye"
+}
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
@@ -60,35 +63,70 @@ dogyears(c,d)
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
- 
-
-
-
+  function dogFood(age, weight){
+      if (age >= 1){
+          if(weight <= 5){
+              return .05 * weight
+          } else if (weight <= 10){
+              return .04 * weight
+          } else if (weight <= 15){
+              return .03 * weight
+          } else {
+              return .02 * weight
+          }
+      } else {
+          if (age <= .3){
+              return .1 * weight
+          } else if (age <= .65){
+              return .05 * weight
+          } else {
+              return .04 * weight
+          }
+        }
+      }
+      console.log(dogFood(1,15))
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-function rps(rock, paper, scissors){
-let random = math.random()
-if (random < 3) {console.log('rock')}
-if (random > 3 && random <6){console.log('paper')}
-if (random > 6){console.log('scissors')}
+function cpuMove(){
+    const cpuChoice = Math.floor(Math.random()*3) + 1);
+
+    if (cpuMove ===1){
+        return "rock"
+    } else if (cpuMove ===2){
+        return "paper"
+    } else{
+        return "scissors"
+    }
 }
-  rps(rock)
+
+function rps (userChoice){
+    const cpuMove1= computerMove()
+   if (userMove === "rock" && cpuMove1 === "scissors"){
+       console.log("you win!")
+   }
+}
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
+let kilometers = 50
+let factor = .62
+let miles = kilometers * factor
+console.log(miles)
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+  let feet = 12
+  let total = 30.48
+  let centimeters = feet * total
+  console.log(centimeters)
 
 
 
@@ -97,8 +135,24 @@ if (random > 6){console.log('scissors')}
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
+function annoyingSong() {  
+    let bottles = 99
+    let bottlesLeft = 98
+    for (i = 99; i >= 1; i--) {
+      if (i == 1) {
+        bottles = "bottle";
+        bottlesLeft = "No bottles of beer on the wall!";
+      } else {
+        bottles = "bottles";
+        bottlesLeft = i - 1 + " bottles of beer on the wall!";
+      } console.log(i+ " " + bottles + " of beer on the wall,");
+      console.log(i+ " " + bottles + " of beer,");
+      console.log("Take one down, pass it around,");
+      console.log(bottlesLeft);
+      } 
+      
+  }
+  console.log(annoyingSong());
 
 
 
@@ -110,7 +164,18 @@ if (random > 6){console.log('scissors')}
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+function grades(){
+    if(grades <= 59){
+        return ("F");
+    }else if(grades <= 69){
+        return ("D");
+    }else if(grades  <= 79){
+        return ("C");
+    }else if(grades  <= 89){
+        return ("B");
+    }else{
+        return ("A");
+    }
 
   
   
